@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-400">
+  <h1 class="text-center text-5xl">hello <%=locals.name%></h1>
+
+  <!-- component -->
+<div class="mt-10 flex items-center justify-center">
+  <div class="px-9 pt-10 pb-14 flex flex-col gap-y-8 bg-teal-900 text-white rounded-xl max-w-[510px] max-h-[468px]">
+      <div class="flex justify-end">
+          <img width="32" height="32" src="https://img.icons8.com/ios/50/ffffff/delete-sign--v1.png" alt="delete-sign--v1"/>
+      </div>
+      <div>
+          <div class="font-semibold text-2xl pb-4 ">Bleibe auf dem Laufenden</div>
+          <p class="">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+          </p>
+      </div>
+      <div>
+          <form method="post" action="/todos" class="flex flex-col space-y-8">
+              <div class="flex flex-col gap-y-8 h-12 space-x-2 w-auto">
+                  <input type="text" id="description" name="description" required class="bg-transparent border-2 rounded-full py-4 px-6 text-[16px] leading-[22.4px] font-light placeholder:text-white text-white" placeholder="description"/>
+              </div>
+              <button type="submit" class="max-w-[200px] h-auto rounded-full bg-white text-black py-3 px-6 ">
+                  <span class="text-teal-900 font-semibold">ADD</span>
+              </button>
+          </form>
+      </div>
+  </div>
+</div>
+    
+    
+</body>
+</html>
